@@ -4,237 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>گنجینه نوستالژی</title>
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Vazirmatn Font -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
-    
     <style>
-        :root {
-            --bg-primary: #0f172a;
-            --bg-secondary: #1e293b;
-            --bg-card: #334155;
-            --accent-color: #38bdf8;
-            --accent-hover: #0284c7;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --danger: #ef4444;
-            --success: #22c55e;
-        }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Vazirmatn', sans-serif;
         }
-
         body {
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        header {
-            background-color: var(--bg-secondary);
-            padding: 1.5rem;
-            text-align: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        header h1 {
-            color: var(--accent-color);
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        main {
-            flex: 1;
-            max-width: 1200px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-
-        .search-box {
-            margin-bottom: 2rem;
+            font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
             display: flex;
             justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            direction: rtl;
         }
-
-        .search-box input {
-            width: 100%;
-            max-width: 500px;
-            padding: 0.75rem 1.25rem;
-            border-radius: 9999px;
-            border: 2px solid var(--bg-card);
-            background-color: var(--bg-secondary);
-            color: var(--text-primary);
-            font-size: 1rem;
-            outline: none;
-            transition: border-color 0.3s ease;
-        }
-
-        .search-box input:focus {
-            border-color: var(--accent-color);
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .card {
-            background-color: var(--bg-secondary);
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
             border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
-        }
-
-        .card-img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            background-color: var(--bg-card);
-        }
-
-        .card-body {
-            padding: 1.25rem;
-            display: flex;font-weight: bold;
-            text-decoration: none;
-            transition: background-color 0.2s ease;
-        }
-
-        .btn:hover {
-            background-color: var(--accent-hover);
-            color: #fff;
-        }
-
-        footer {
-            background-color: var(--bg-secondary);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
-            padding: 1.5rem;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            margin-top: auto;
-            border-top: 1px solid var(--bg-card);
+            max-width: 500px;
+            width: 90%;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #2980b9;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1><i class="fa-solid fa-tv"></i> گنجینه نوستالژی</h1>
-        <p>آرشیو خاطره‌انگیز برنامه‌ها و ویدیوهای قدیمی</p>
-    </header>
+    <div class="container">
+        <h1>به وب‌سایت گنجینه نوستالژی خوش آمدید</h1>
+        <p>این صفحه به زودی با محتوای جدید به‌روزرسانی خواهد شد.</p>
+        <a href="#" class="btn">اطلاعات بیشتر</a>
+    </div>
 
-    <main>
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="جستجو در آرشیو...">
-        </div>
-
-        <div class="grid-container" id="cardsGrid">
-            <!-- کارت نمونه ۱ -->
-            <div class="card">
-                <img src="https://via.placeholder.com/400x250/334155/f8fafc?text=Ganjineh" alt="تصویر برنامه" class="card-img">
-                <div class="card-body">
-                    <h2 class="card-title">برنامه اول</h2>
-                    <p class="card-desc">توضیحات مربوط به ویدیو یا برنامه نوستالژیک در این قسمت قرار می‌گیرد.</p>
-                    <a href="#" class="btn"><i class="fa-solid fa-play"></i> مشاهده برنامه</a>
-                </div>
-            </div>
-
-            <!-- کارت نمونه ۲ -->
-            <div class="card">
-                <img src="https://via.placeholder.com/400x250/334155/f8fafc?text=Ganjineh" alt="تصویر برنامه" class="card-img">
-                <div class="card-body">
-                    <h2 class="card-title">برنامه دوم</h2>
-                    <p class="card-desc">توضیحات مربوط به ویدیو یا برنامه نوستالژیک در این قسمت قرار می‌گیرد.</p>
-                    <a href="#" class="btn"><i class="fa-solid fa-play"></i> مشاهده برنامه</a>
-                </div>
-            </div>
-
-            <!-- کارت نمونه ۳ -->
-            <div class="card">
-                <img src="https://via.placeholder.com/400x250/334155/f8fafc?text=Ganjineh" alt="تصویر برنامه" class="card-img">
-                <div class="card-body">
-                    <h2 class="card-title">برنامه سوم</h2>
-                    <p class="card-desc">توضیحات مربوط به ویدیو یا برنامه نوستالژیک در این قسمت قرار می‌گیرد.</p>
-                    <a href="#" class="btn"><i class="fa-solid fa-play"></i> مشاهده برنامه</a>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <p>تمامی حقوق محفوظ است © گنجینه نوستالژی</p>
-    </footer>
-
-    <script>
-        // قابلیت جستجوی ساده
-        document.getElementById('searchInput').addEventListener('input', function(e) {
-            const searchTerm = e.target.value.toLowerCase();
-            const cards = document.querySelectorAll('.card');
-            
-            cards.forEach(card => {
-                const title = card.querySelector('.card-title').textContent.toLowerCase();
-                const desc = card.querySelector('.card-desc').textContent.toLowerCase();
-                
-                if (title.includes(searchTerm) || desc.includes(searchTerm)) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    </script>
 </body>
-</html>
-            flex-direction: column;
-            flex: 1;
-        }
-
-        .card-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-        }
-
-        .card-desc {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            line-height: 1.5;
-            margin-bottom: 1.25rem;
-            flex: 1;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 0.6rem 1.2rem;
-            border-radius: 8px;
-            background-color: var(--accent-color);
-            color: #0f172a;                   
+</html>   
 
